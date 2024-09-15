@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-  get 'lists/new'
+  get 'lists/new' =>'lists#new' #URLとコントローラー&アクション名が同じときはget 'lists/new'として =>意向を省略できる。
   get '/top' => 'homes#top'
   post 'lists' => 'lists#create'
   get 'lists' => 'lists#index'
